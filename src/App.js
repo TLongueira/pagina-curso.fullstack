@@ -1,24 +1,38 @@
 import logo from './logo.svg';
+import hobit from './casahobbit.png'
+import Button from 'react-bootstrap/Button'
 import './App.css';
+import Home from './componentes/home/home';
+import CNavbar from './componentes/navbar/CNavbar';
+import CFooter from './componentes/footer/CFooter';
+import CButton from './componentes/button/CButton';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Contacto from './componentes/contacto/Contacto';
+import Cv from './componentes/cv/cv';
+
+
+let buttonText = "Boton"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <BrowserRouter>
+      <CNavbar />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/cv">
+        <Cv />
+        </Route>
+        <Route exact path="/contacto">
+        <Contacto />
+        </Route>
+      </Switch>
+      <CFooter />
+
+    </BrowserRouter>
+
   );
 }
 

@@ -3,10 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Intro from './componentes/intro/intro';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import CButton from './componentes/button/CButton';
+import perfil from './casahobbit.png'
+import Home from './componentes/home/home';
+
 
 ReactDOM.render(
   <React.StrictMode>
+
     <App />
+
+
+
   </React.StrictMode>,
   document.getElementById('root')
 );
